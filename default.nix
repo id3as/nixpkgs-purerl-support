@@ -9,7 +9,8 @@ self: super:
       purescript-0-13-6 = super.callPackage ./support/purescript/0.13.6.nix {};
       purescript-0-13-8 = super.callPackage ./support/purescript/0.13.8.nix {};
 
-      erlang_ls-0-4-1 =  super.callPackage ./support/erlang_ls/0.4.1.nix {};
+      # Hideously broken, can't even be botherd updating it
+#      erlang_ls-0-4-1 =   super.beam.packages.erlang.callPackage ./support/erlang_ls/0.4.1.nix {};
     };
 }
 
