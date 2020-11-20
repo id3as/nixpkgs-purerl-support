@@ -4,7 +4,7 @@
   tree }:
 
 let
-  version = "0.4.1";
+  version = "0.5.1";
 
   lager = fetchHex {
     pkg = "lager";
@@ -137,7 +137,7 @@ in
     owner  = "erlang-ls";
     repo   = "erlang_ls";
     rev    = "${version}";
-    sha256 = "1jp4nrb4ns21jga7ysbqpwpkkmmsz90shcgk8qr4ibi4k0ly98ax";
+    sha256 = "1xs9caycxjd7fcgmac0nm746kywy8aygdg0ipfrbwvjx5rcr0b14";
   };
 
   buildInputs =  [];
