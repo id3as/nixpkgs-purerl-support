@@ -3,6 +3,7 @@ self: super:
     purerl-support = (super.purerl-support or {}) // {
       spago-0-12-1-0 = super.callPackage ./support/spago/0.12.1.0.nix {};
       spago-0-16-0 = super.callPackage ./support/spago/0.16.0.nix {};
+      spago-0-20-3 = super.callPackage ./support/spago/0.20.3.nix {};
 
       dhall-json-1-5-0 = super.callPackage ./support/dhall/dhall-json-1-5-0.nix {};
 

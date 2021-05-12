@@ -20,6 +20,7 @@ mkShell {
     whichErlang.rebar3
 
     purerl-support.purescript-0-14-1
+    purerl-support.spago-0-20-3
   ];
 
   # Just give id3as_media the path to erlang
