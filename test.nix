@@ -19,7 +19,7 @@ mkShell {
     whichErlang.erlang
     whichErlang.rebar3
 
-    purerl-support.purescript-0-14-1
+    purerl-support.purescript-0-14-2
     purerl-support.spago-0-20-3
   ];
 

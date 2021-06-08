@@ -15,5 +15,6 @@ self: super:
       purescript-0-13-8 = super.callPackage ./support/purescript/0.13.8.nix {};
       purescript-0-14-0 = super.callPackage ./support/purescript/0.14.0.nix {};
       purescript-0-14-1 = super.callPackage ./support/purescript/0.14.1.nix {};
+      purescript-0-14-2 = super.callPackage ./support/purescript/0.14.2.nix {};
     };
 }
