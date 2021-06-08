@@ -22,8 +22,5 @@ mkShell {
     purerl-support.purescript-0-14-2
     purerl-support.spago-0-20-3
   ];
-
-  # Just give id3as_media the path to erlang
-  _KERL_ACTIVE_DIR="${whichErlang.erlang}/lib/erlang";
 }
 
