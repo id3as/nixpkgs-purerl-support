@@ -5,15 +5,15 @@ pkgs.stdenv.mkDerivation rec {
 
   version = "7.0.0";
 
-  src = if pkgs.stdenv.isDarwin
-  then pkgs.fetchurl {
-    url = "https://bintray.com/joneshf/generic/download_file?file_path=purty-7.0.0-osx.tar.gz";
-    sha256 = "0ci72ijx6m43fy61cwkkyxp4prxhwrrnbh5myr3sva97cqvm6bj8";
-  }
-  else pkgs.fetchurl {
-    url = "https://bintray.com/joneshf/generic/download_file?file_path=purty-7.0.0-linux.tar.gz";
-    sha256 = "17fzdfiws4wmhbj2q5mf5cadbsnp7ag2bf12y3awfvvmajh5ddjh";
+  src = pkgs.fetchurl {
+    url = "https://registry.npmjs.org/purty/-/purty-${version}.tgz";
+    sha256 = "1h9z43aj1gflysy0379j7cpdvszjlk9lvg861hgk7dmqq59qzd4y";
   };
+  binPath = if pkgs.stdenv.isDarwin
+    then
+      "package/bin/osx/purty"
+    else
+      "package/bin/linux/purty";
 
   buildInputs = [ pkgs.zlib pkgs.gmp pkgs.ncurses5 ];
 
@@ -28,7 +28,7 @@ pkgs.stdenv.mkDerivation rec {
   installPhase = ''
     mkdir -p $out/bin
     PURTY="$out/bin/purty"
-    install -D -m555 -T purty $PURTY
+    install -D -m555 -T $binPath $PURTY
     mkdir -p $out/etc/bash_completion.d/
     $PURTY --bash-completion-script $PURTY > $out/etc/bash_completion.d/purty-completion.bash
   '';
