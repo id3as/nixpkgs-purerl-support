@@ -1,5 +1,5 @@
 let
-  erlangReleases = builtins.fetchTarball https://github.com/nixerl/nixpkgs-nixerl/archive/v1.0.7-devel.tar.gz;
+  erlangReleases = builtins.fetchTarball https://github.com/nixerl/nixpkgs-nixerl/archive/v1.0.19-devel.tar.gz;
 
   nixpkgs =
     import <nixpkgs> {
@@ -9,19 +9,18 @@ let
       ];
     };
 
-  whichErlang = nixpkgs.nixerl.erlang-22-3;
+  # whichErlang = nixpkgs.nixerl.erlang-23-2-1;
 in
 
 with nixpkgs;
 
 mkShell {
   buildInputs = with pkgs; [
-    whichErlang.erlang
-    whichErlang.rebar3
+    # whichErlang.erlang
 
 
     purerl-support.purty-7-0-0
-    purerl-support.purescript-0-14-3
+    purerl-support.purescript-0-14-4
     purerl-support.spago-0-20-3
   ];
 }
