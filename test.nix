@@ -20,7 +20,7 @@ mkShell {
 
 
     purerl-support.purty-7-0-0
-    purerl-support.purescript-0-14-4
+    purerl-support.purescript-0-14-5
     purerl-support.spago-0-20-3
   ];
 }
